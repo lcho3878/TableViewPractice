@@ -13,6 +13,17 @@
 		54644FC92BFEC7590042CA5F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 54644FC82BFEC7590042CA5F /* Base */; };
 		54644FCB2BFEC7590042CA5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54644FCA2BFEC7590042CA5F /* Assets.xcassets */; };
 		54644FCE2BFEC7590042CA5F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 54644FCD2BFEC7590042CA5F /* Base */; };
+		54644FD62BFED9930042CA5F /* HateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54644FD52BFED9930042CA5F /* HateViewController.swift */; };
+		54644FD82BFEEB030042CA5F /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54644FD72BFEEB030042CA5F /* ShowViewController.swift */; };
+		54644FDA2BFEEB070042CA5F /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54644FD92BFEEB070042CA5F /* ModalViewController.swift */; };
+		54644FDC2BFF06070042CA5F /* Todo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54644FDB2BFF06070042CA5F /* Todo.storyboard */; };
+		54644FDE2BFF06BD0042CA5F /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54644FDD2BFF06BD0042CA5F /* Search.storyboard */; };
+		54644FE02BFF16190042CA5F /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54644FDF2BFF16190042CA5F /* SimpleTableViewController.swift */; };
+		54644FE22BFF1E0B0042CA5F /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54644FE12BFF1E0B0042CA5F /* SimpleTableViewCell.swift */; };
+		54644FE42BFF23EB0042CA5F /* Assignment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54644FE32BFF23EB0042CA5F /* Assignment.storyboard */; };
+		54644FE82BFF28720042CA5F /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54644FE72BFF28720042CA5F /* SettingTableViewController.swift */; };
+		54644FEA2BFF2BF90042CA5F /* ShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54644FE92BFF2BF90042CA5F /* ShoppingTableViewController.swift */; };
+		54644FEC2BFF32C40042CA5F /* ShoppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54644FEB2BFF32C40042CA5F /* ShoppingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +35,17 @@
 		54644FCA2BFEC7590042CA5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54644FCD2BFEC7590042CA5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54644FCF2BFEC7590042CA5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54644FD52BFED9930042CA5F /* HateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HateViewController.swift; sourceTree = "<group>"; };
+		54644FD72BFEEB030042CA5F /* ShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
+		54644FD92BFEEB070042CA5F /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		54644FDB2BFF06070042CA5F /* Todo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Todo.storyboard; sourceTree = "<group>"; };
+		54644FDD2BFF06BD0042CA5F /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		54644FDF2BFF16190042CA5F /* SimpleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
+		54644FE12BFF1E0B0042CA5F /* SimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCell.swift; sourceTree = "<group>"; };
+		54644FE32BFF23EB0042CA5F /* Assignment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Assignment.storyboard; sourceTree = "<group>"; };
+		54644FE72BFF28720042CA5F /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		54644FE92BFF2BF90042CA5F /* ShoppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewController.swift; sourceTree = "<group>"; };
+		54644FEB2BFF32C40042CA5F /* ShoppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +62,7 @@
 		54644FB52BFEC7590042CA5F = {
 			isa = PBXGroup;
 			children = (
+				54644FE12BFF1E0B0042CA5F /* SimpleTableViewCell.swift */,
 				54644FC02BFEC7590042CA5F /* 20240523TableView */,
 				54644FBF2BFEC7590042CA5F /* Products */,
 			);
@@ -59,7 +82,17 @@
 				54644FC12BFEC7590042CA5F /* AppDelegate.swift */,
 				54644FC32BFEC7590042CA5F /* SceneDelegate.swift */,
 				54644FC52BFEC7590042CA5F /* ViewController.swift */,
+				54644FD52BFED9930042CA5F /* HateViewController.swift */,
 				54644FC72BFEC7590042CA5F /* Main.storyboard */,
+				54644FE32BFF23EB0042CA5F /* Assignment.storyboard */,
+				54644FE72BFF28720042CA5F /* SettingTableViewController.swift */,
+				54644FE92BFF2BF90042CA5F /* ShoppingTableViewController.swift */,
+				54644FEB2BFF32C40042CA5F /* ShoppingTableViewCell.swift */,
+				54644FDB2BFF06070042CA5F /* Todo.storyboard */,
+				54644FDD2BFF06BD0042CA5F /* Search.storyboard */,
+				54644FDF2BFF16190042CA5F /* SimpleTableViewController.swift */,
+				54644FD72BFEEB030042CA5F /* ShowViewController.swift */,
+				54644FD92BFEEB070042CA5F /* ModalViewController.swift */,
 				54644FCA2BFEC7590042CA5F /* Assets.xcassets */,
 				54644FCC2BFEC7590042CA5F /* LaunchScreen.storyboard */,
 				54644FCF2BFEC7590042CA5F /* Info.plist */,
@@ -125,9 +158,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54644FDC2BFF06070042CA5F /* Todo.storyboard in Resources */,
 				54644FCB2BFEC7590042CA5F /* Assets.xcassets in Resources */,
 				54644FCE2BFEC7590042CA5F /* Base in Resources */,
 				54644FC92BFEC7590042CA5F /* Base in Resources */,
+				54644FDE2BFF06BD0042CA5F /* Search.storyboard in Resources */,
+				54644FE42BFF23EB0042CA5F /* Assignment.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +174,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54644FD82BFEEB030042CA5F /* ShowViewController.swift in Sources */,
+				54644FE22BFF1E0B0042CA5F /* SimpleTableViewCell.swift in Sources */,
+				54644FD62BFED9930042CA5F /* HateViewController.swift in Sources */,
+				54644FEA2BFF2BF90042CA5F /* ShoppingTableViewController.swift in Sources */,
 				54644FC62BFEC7590042CA5F /* ViewController.swift in Sources */,
+				54644FEC2BFF32C40042CA5F /* ShoppingTableViewCell.swift in Sources */,
 				54644FC22BFEC7590042CA5F /* AppDelegate.swift in Sources */,
+				54644FE02BFF16190042CA5F /* SimpleTableViewController.swift in Sources */,
+				54644FE82BFF28720042CA5F /* SettingTableViewController.swift in Sources */,
+				54644FDA2BFEEB070042CA5F /* ModalViewController.swift in Sources */,
 				54644FC42BFEC7590042CA5F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +343,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,9 +351,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lcho3878.-0240523TableView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -326,6 +375,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,9 +383,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lcho3878.-0240523TableView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
