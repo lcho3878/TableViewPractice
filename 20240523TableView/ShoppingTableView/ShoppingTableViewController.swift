@@ -61,9 +61,12 @@ class ShoppingTableViewController: UITableViewController {
     }
     
     @IBAction func addButtonClicked(_ sender: UIButton) {
-        let content = searchTextField.text!
+        guard let content = searchTextField.text, !content.isEmpty else {
+            return
+        }
         let shopping = Shoping(content: content, isStar: false, isCheck: false)
         shopiingList.append(shopping)
+        searchTextField.text = ""
         tableView.reloadData()
     }
     
