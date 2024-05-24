@@ -15,6 +15,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="9DQ-Wd-juf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hkj-Di-szS">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -240,6 +241,10 @@
                             <rect key="frame" x="0.0" y="0.0" width="393" height="92"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2MZ-9M-Sup">
+                                    <rect key="frame" x="8" y="8" width="377" height="76"/>
+                                    <color key="backgroundColor" systemColor="linkColor"/>
+                                </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6o0-Ml-EHi">
                                     <rect key="frame" x="335" y="31" width="50" height="30"/>
                                     <constraints>
@@ -257,13 +262,16 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemGray4Color"/>
                             <constraints>
+                                <constraint firstItem="2MZ-9M-Sup" firstAttribute="leading" secondItem="8gf-h6-Vgj" secondAttribute="leading" constant="8" id="0Pa-N2-LcH"/>
                                 <constraint firstItem="6o0-Ml-EHi" firstAttribute="centerY" secondItem="8gf-h6-Vgj" secondAttribute="centerY" id="5O7-Sx-aqz"/>
+                                <constraint firstItem="2MZ-9M-Sup" firstAttribute="top" secondItem="8gf-h6-Vgj" secondAttribute="top" constant="8" id="E97-ef-wxa"/>
                                 <constraint firstItem="vxZ-kw-GWJ" firstAttribute="leading" secondItem="8gf-h6-Vgj" secondAttribute="leading" constant="8" id="EpR-Au-dVN"/>
                                 <constraint firstAttribute="trailing" secondItem="6o0-Ml-EHi" secondAttribute="trailing" constant="8" id="PsI-jM-hHf"/>
+                                <constraint firstAttribute="bottom" secondItem="2MZ-9M-Sup" secondAttribute="bottom" constant="8" id="Qfh-Nk-wfk"/>
                                 <constraint firstItem="vxZ-kw-GWJ" firstAttribute="centerY" secondItem="8gf-h6-Vgj" secondAttribute="centerY" id="Yaq-LE-4DV"/>
                                 <constraint firstItem="6o0-Ml-EHi" firstAttribute="leading" secondItem="vxZ-kw-GWJ" secondAttribute="trailing" constant="8" id="egj-Od-eUo"/>
+                                <constraint firstAttribute="trailing" secondItem="2MZ-9M-Sup" secondAttribute="trailing" constant="8" id="th4-a3-e7n"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -321,6 +329,7 @@
                     <connections>
                         <outlet property="addButton" destination="6o0-Ml-EHi" id="jU9-4K-thV"/>
                         <outlet property="searchTextField" destination="vxZ-kw-GWJ" id="bLV-up-CAp"/>
+                        <outlet property="sectionBackgroundView" destination="2MZ-9M-Sup" id="60j-tx-GIO"/>
                         <outlet property="sectionView" destination="8gf-h6-Vgj" id="rV5-85-6Vd"/>
                     </connections>
                 </tableViewController>
@@ -393,14 +402,14 @@
         <image name="moon" catalog="system" width="128" height="123"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="star" catalog="system" width="128" height="116"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

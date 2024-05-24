@@ -10,6 +10,7 @@ import UIKit
 class ShoppingTableViewController: UITableViewController {
     private var shopiingList: [Shoping] = []
     
+    @IBOutlet var sectionBackgroundView: UIView!
     @IBOutlet var sectionView: UIView!
     @IBOutlet var searchTextField: UITextField!
     @IBOutlet var addButton: UIButton!
@@ -50,10 +51,12 @@ class ShoppingTableViewController: UITableViewController {
         addButton.layer.cornerRadius = 5
         
         searchTextField.placeholder = "무엇을 구매하실 건가요?"
-        searchTextField.backgroundColor = .systemGray4
+        searchTextField.backgroundColor = .clear
         searchTextField.borderStyle = .none
         
-        sectionView.layer.cornerRadius = 20
+        sectionBackgroundView.layer.cornerRadius = 20
+        sectionBackgroundView.backgroundColor = .systemGray4
+        
         
     }
     
