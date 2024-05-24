@@ -8,9 +8,7 @@
 import UIKit
 
 class ShoppingTableViewController: UITableViewController {
-    private var shopiingList: [String] = []
-    private var starList: [Bool] = []
-    private var checkList: [Bool] = []
+    private var shopiingList: [Shoping] = []
     
     @IBOutlet var sectionView: UIView!
     @IBOutlet var searchTextField: UITextField!
@@ -32,9 +30,11 @@ class ShoppingTableViewController: UITableViewController {
         cell.checkButton.tag = index
         cell.starButton.tag = index
         
-        cell.contentLabel.text = shopiingList[index]
-        let starImage = starList[index] ? "star.fill" : "star"
-        let checkImage = checkList[index] ? "checkmark.message.fill" : "checkmark.message"
+        let shopping = shopiingList[index]
+        
+        cell.contentLabel.text = shopping.content
+        let starImage = shopping.isStar ? "star.fill" : "star"
+        let checkImage = shopping.isCheck ? "checkmark.message.fill" : "checkmark.message"
         cell.starButton.setImage(UIImage(systemName: starImage), for: .normal)
         cell.starButton.addTarget(self, action: #selector(starButtonClicked), for: .touchUpInside)
         cell.checkButton.setImage(UIImage(systemName: checkImage), for: .normal)
@@ -59,21 +59,20 @@ class ShoppingTableViewController: UITableViewController {
     
     @IBAction func addButtonClicked(_ sender: UIButton) {
         let content = searchTextField.text!
-        shopiingList.append(content)
-        checkList.append(false)
-        starList.append(false)
+        let shopping = Shoping(content: content, isStar: false, isCheck: false)
+        shopiingList.append(shopping)
         tableView.reloadData()
     }
     
     @objc func starButtonClicked(_ sender: UIButton) {
         let index = sender.tag
-        starList[index].toggle()
+        shopiingList[index].isStar.toggle()
         tableView.reloadData()
     }
     
     @objc func checkButtonClicked(_ sender: UIButton) {
         let index = sender.tag
-        checkList[index].toggle()
+        shopiingList[index].isCheck.toggle()
         tableView.reloadData()
     }
     

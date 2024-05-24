@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct Shoping {
+    let content: String
+    var isStar: Bool
+    var isCheck: Bool
+}
+
