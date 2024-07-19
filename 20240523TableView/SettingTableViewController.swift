@@ -6,47 +6,67 @@
 //
 
 import UIKit
+import SnapKit
 
-class SettingTableViewController: UITableViewController {
+class SettingTableViewController: UIViewController {
     
     let list = ["전체 설정", "개인 설정", "기타"]
     let data = ["전체 설정": ["공지사항", "실험실", "버전 정보"],
                 "개인 설정": ["개인/보안", "알림", "채팅", "멀티프로필"],
                 "기타": ["고객센터/도움말"]
     ]
-
+    
+    private var dataSource: UICollectionViewDiffableDataSource<String, String>!
+    
+    private let layout = {
+        var configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
+        configuration.showsSeparators = false
+        let layout = UICollectionViewCompositionalLayout.list(using: configuration)
+        return layout
+    }()
+    
+    private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    }
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return list.count
-    }
-    
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return list[section]
+        configureHierarhcy()
+        configureLayout()
+        configureDataSource()
+        updateSnapshot()
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let data = data[list[section]] else {
-            return 0
+    private func configureHierarhcy() {
+        view.addSubview(collectionView)
+    }
+    
+    private func configureLayout() {
+        collectionView.snp.makeConstraints {
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
         }
-        return data.count
+    }
+}
+
+extension SettingTableViewController {
+    private func configureDataSource() {
+        var registration: UICollectionView.CellRegistration<UICollectionViewListCell, String>!
+        
+        registration = UICollectionView.CellRegistration { cell, indexPath, itemIdentifier in
+            var content = UIListContentConfiguration.valueCell()
+            content.text = itemIdentifier
+            cell.contentConfiguration = content
+        }
+        dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
+            let cell = collectionView.dequeueConfiguredReusableCell(using: registration, for: indexPath, item: itemIdentifier)
+            return cell
+        })
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "basicType") else {
-            return UITableViewCell()
-        }
-        let section = indexPath.section
-        let index = indexPath.row
-        let headerTitle = list[section]
-        let content = data[headerTitle]?[index]
-    
-        cell.textLabel?.text = content
-        
-        
-        return cell
+    private func updateSnapshot() {
+        var snapshot = NSDiffableDataSourceSnapshot<String, String>()
+        snapshot.appendSections(["전체 설정", "개인 설정", "기타"])
+        snapshot.appendItems(data["전체 설정"]!, toSection: "전체 설정")
+        snapshot.appendItems(data["개인 설정"]!, toSection: "개인 설정")
+        snapshot.appendItems(data["기타"]!, toSection: "기타")
+        dataSource.apply(snapshot)
     }
 }
