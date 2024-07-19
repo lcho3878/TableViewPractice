@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ezx-qj-iUM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dP3-gz-QkB">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -35,7 +35,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057.2519083969464" y="-28.169014084507044"/>
+            <point key="canvasLocation" x="-671" y="-237"/>
         </scene>
         <!--Search-->
         <scene sceneID="AyB-1i-IhE">
@@ -45,30 +45,78 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="euc-y7-Syw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1678.6259541984732" y="-168.3098591549296"/>
+            <point key="canvasLocation" x="-42" y="-396"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="KDM-Lt-lHh">
+        <!--Food View Controller-->
+        <scene sceneID="w7e-6U-Uiw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ezx-qj-iUM" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hos-JK-S28">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                <viewController id="dP3-gz-QkB" customClass="FoodViewController" customModule="_0240523TableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dwI-Fp-CWH">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="h7S-sP-NFF">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5am-NI-jpv"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dP3-gz-QkB" id="EKh-f4-Bbh"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="m9q-hZ-1iR">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodCell" textLabel="aoK-nL-Jtz" rowHeight="63" style="IBUITableViewCellStyleDefault" id="nzF-Hp-UCX">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="63"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nzF-Hp-UCX" id="JzN-jc-kGG">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="63"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aoK-nL-Jtz">
+                                                    <rect key="frame" x="20" y="0.0" width="353" height="63"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZL1-Cj-X2I"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="h7S-sP-NFF" firstAttribute="top" secondItem="ZL1-Cj-X2I" secondAttribute="top" id="2nT-I7-8hI"/>
+                            <constraint firstItem="h7S-sP-NFF" firstAttribute="leading" secondItem="ZL1-Cj-X2I" secondAttribute="leading" id="CKy-iD-epM"/>
+                            <constraint firstItem="m9q-hZ-1iR" firstAttribute="bottom" secondItem="ZL1-Cj-X2I" secondAttribute="bottom" id="LpC-zP-9TD"/>
+                            <constraint firstItem="h7S-sP-NFF" firstAttribute="trailing" secondItem="ZL1-Cj-X2I" secondAttribute="trailing" id="MmO-rp-Uuj"/>
+                            <constraint firstItem="m9q-hZ-1iR" firstAttribute="trailing" secondItem="ZL1-Cj-X2I" secondAttribute="trailing" id="N3x-dk-L2C"/>
+                            <constraint firstItem="m9q-hZ-1iR" firstAttribute="leading" secondItem="ZL1-Cj-X2I" secondAttribute="leading" id="Z6f-v0-AhI"/>
+                            <constraint firstItem="m9q-hZ-1iR" firstAttribute="top" secondItem="h7S-sP-NFF" secondAttribute="bottom" id="ffY-Wb-uNl"/>
+                        </constraints>
+                    </view>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="eK8-Qb-b60"/>
+                        <outlet property="foodTableView" destination="m9q-hZ-1iR" id="rgq-EX-h6b"/>
+                        <outlet property="searchBar" destination="h7S-sP-NFF" id="n7w-i0-uKX"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UKi-Qh-yqQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BdU-Ki-4eU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.53435114503816" y="-28.169014084507044"/>
+            <point key="canvasLocation" x="600.76335877862596" y="-208.45070422535213"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
