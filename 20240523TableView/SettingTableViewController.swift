@@ -10,13 +10,13 @@ import SnapKit
 
 class SettingTableViewController: UIViewController {
     
-    let list = ["전체 설정", "개인 설정", "기타"]
-    let data = ["전체 설정": ["공지사항", "실험실", "버전 정보"],
-                "개인 설정": ["개인/보안", "알림", "채팅", "멀티프로필"],
-                "기타": ["고객센터/도움말"]
+    private lazy var data: [Section: [String]] = [
+        .all: ["공지사항", "실험실", "버전 정보"],
+        .private: ["개인/보안", "알림", "채팅", "멀티프로필"],
+        .etc: ["고객센터/도움말"]
     ]
     
-    private var dataSource: UICollectionViewDiffableDataSource<String, String>!
+    private var dataSource: UICollectionViewDiffableDataSource<Section, String>!
     
     private let layout = {
         var configuration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
@@ -62,11 +62,19 @@ extension SettingTableViewController {
     }
     
     private func updateSnapshot() {
-        var snapshot = NSDiffableDataSourceSnapshot<String, String>()
-        snapshot.appendSections(["전체 설정", "개인 설정", "기타"])
-        snapshot.appendItems(data["전체 설정"]!, toSection: "전체 설정")
-        snapshot.appendItems(data["개인 설정"]!, toSection: "개인 설정")
-        snapshot.appendItems(data["기타"]!, toSection: "기타")
+        var snapshot = NSDiffableDataSourceSnapshot<Section, String>()
+        snapshot.appendSections(Section.allCases)
+        snapshot.appendItems(data[.all]!, toSection: .all)
+        snapshot.appendItems(data[.private]!, toSection: .private)
+        snapshot.appendItems(data[.etc]!, toSection: .etc)
         dataSource.apply(snapshot)
+    }
+}
+
+extension SettingTableViewController {
+    enum Section: String, CaseIterable {
+        case all = "전체 설정"
+        case `private` = "개인 설정"
+        case etc = "기타"
     }
 }
